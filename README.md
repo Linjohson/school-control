@@ -60,9 +60,9 @@ Siga estas etapas para instalar e executar o projeto:
   - cd school-control-master/School-control-frontend
 #### 3. Através do git bash here
   - Faça um "git checkout masterFrontend"
-#### 3. Instale as dependências do projeto:
+#### 4. Instale as dependências do projeto:
   - npm install
-#### 4. Inicie o servidor de desenvolvimento:
+#### 5. Inicie o servidor de desenvolvimento:
   - ng serve
 
 ## Suposições
