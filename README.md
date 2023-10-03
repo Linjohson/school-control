@@ -58,6 +58,8 @@ Siga estas etapas para instalar e executar o projeto:
 #### 1. Baixe o arquivo ZIP do repositório do backend no GitHub [aqui](https://github.com/Linjohson/school-control/archive/master.zip) e extraia-o para o seu ambiente local.
 #### 2. Navegue até o diretório do frontend:
   - cd school-control-master/School-control-frontend
+#### 3. Através do git bash here
+  - Faça um "git checkout masterFrontend"
 #### 3. Instale as dependências do projeto:
   - npm install
 #### 4. Inicie o servidor de desenvolvimento:
