@@ -37,12 +37,12 @@ export class MatrizCurricularComponent implements OnInit {
     this.listarCursos();
     this.listarSemestres();
     this.listarDisciplinas();
-    const storedMatrices = localStorage.getItem('matricesCurriculares');
-    if (storedMatrices) {
-      this.matricesCurriculares = JSON.parse(storedMatrices);
-    } else {
-      this.exibirSelecoes();
-    }
+  
+    // Limpe o Local Storage ao reiniciar o projeto
+    localStorage.removeItem('matricesCurriculares');
+  
+    // Inicialize o array como vazio
+    this.matricesCurriculares = [];
   }
 
   // matriz-curricular.component.ts
@@ -71,7 +71,7 @@ export class MatrizCurricularComponent implements OnInit {
     this.selectedDisciplinas = [];
 
     // Armazene no Local Storage
-    localStorage.setItem('matricesCurriculares', JSON.stringify(this.matricesCurriculares));
+    // localStorage.setItem('matricesCurriculares', JSON.stringify(this.matricesCurriculares));
 
     console.log('Matriz Curricular Salva:', novaMatrizCurricular);
   }
@@ -81,7 +81,7 @@ export class MatrizCurricularComponent implements OnInit {
     if (confirm('Tem certeza de que deseja excluir esta matriz curricular?')) {
       this.matricesCurriculares.splice(index, 1);
 
-      localStorage.setItem('matricesCurriculares', JSON.stringify(this.matricesCurriculares));
+      // localStorage.setItem('matricesCurriculares', JSON.stringify(this.matricesCurriculares));
     }
   }
 
@@ -124,6 +124,6 @@ export class MatrizCurricularComponent implements OnInit {
     this.mostrarAviso = false;
     this.nomeExistente = false;
     this.nomeOriginal = ''; // Limpar o nome original quando o formulário é limpo
-    localStorage.setItem('matricesCurriculares', JSON.stringify(this.matricesCurriculares));
+    // localStorage.setItem('matricesCurriculares', JSON.stringify(this.matricesCurriculares));
   }
 }
